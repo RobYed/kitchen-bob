@@ -27,15 +27,25 @@
   <body layout="column">
 
       
-      <md-toolbar layout="row">
+      <md-toolbar layout="row" ng-controller="NavCtrl">
         <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
           <span class="visually-hidden">Menu</span>
         </button>
-        <h1> viewTitle </h1>
+        <h1>{{ viewTitle }}</h1>
       </md-toolbar>
 
-  
-      <ion-tabs class="tabs-positive">
+      <div layout="row" flex>
+          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+            
+          </md-sidenav>
+          <div layout="column" flex id="content">
+              <md-content layout="column" flex class="md-padding">
+                
+              </md-content>
+          </div>
+      </div>
+
+      <ion-tabs class="tabs-positive tabs-item-hide">
 
         <ion-tab icon="ion-home" href="/home">
           <ion-nav-view name="home"></ion-nav-view>
@@ -46,17 +56,6 @@
         </ion-tab>
 
       </ion-tabs>
-
-      <!-- <div layout="row" flex>
-          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
-            
-          </md-sidenav>
-          <div layout="column" flex id="content">
-              <md-content layout="column" flex class="md-padding">
-                
-              </md-content>
-          </div>
-      </div> -->
     
     <ion-nav-view>
     </ion-nav-view>

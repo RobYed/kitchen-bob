@@ -33,13 +33,13 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
   $stateProvider
 
   // setup an abstract state for the tabs directive
-  /*
+
   .state('tab', {
     url: "/tab",
     abstract: true,
-    templateUrl: "templates/tabs.html"
+    templateUrl: "templates/tabs.html",
+    controller: 'NavCtrl'
   })
-*/
 
 // Home tab - always shown at first
 
